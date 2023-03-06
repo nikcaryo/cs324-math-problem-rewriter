@@ -70,11 +70,14 @@ def parse_constraints(constraints_textbox):
       letter = letter.strip()
       expression = expression.strip()
       try:
+        print(expression)
+        print(locals)
         locals[letter] = evaluate(expression.strip(), locals=locals)
         lines.pop(i)
         popped_one = True
         break
       except ValueError as e:
+        raise(e)
         pass
   if not lines:
     return locals
@@ -83,25 +86,27 @@ def parse_constraints(constraints_textbox):
 
 
 if __name__ == "__main__":
-  try:
-    parse_constraints("""C = A + B
-    A = 1
-    B = 2
-    D = C
-    F = G + 2
-    """)
-  except Exception as e:
-     print(e)
+  # try:
+  #   parse_constraints("""C = A + B
+  #   A = 1
+  #   B = 2
+  #   D = C
+  #   F = G + 2
+  #   """)
+  # except Exception as e:
+  #    print(e)
   
-  print(parse_constraints("""C = A + B
-    A = 1
-    B = 2
-    D = C
-    """))
+  # print(parse_constraints("""C = A + B
+  #   A = 1
+  #   B = 2
+  #   D = C
+  #   """))
   
-  print(parse_constraints("""C = A + B
-    A = 1
-    B = 2
-    D = randint(2,4)
-    answer = A * B + D * C
-    """))
+  # print(parse_constraints("""C = A + B
+  #   A = 1
+  #   B = 2
+  #   D = randint(2,4)
+  #   answer = A * B + D * C
+  #   """))
+  
+  print(parse_constraints("A=randint(20,40)\nB=2*A\nanswer= 2 * A - B"))

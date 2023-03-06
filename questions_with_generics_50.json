@@ -24,6 +24,7 @@
       28,
       54
     ],
+    "constraints": "A=28\nB=2*A\nanswer=2*A-B",
     "lEquations": [
       "28+x=54"
     ],
