@@ -1,0 +1,933 @@
+{
+  "0": {
+    "question": "Joan found 70 seashells on the beach. she gave Sam some of her seashells. She has 27 seashell left. How many seashells did she give to Sam ?",
+    "generic": "Joan found ___A___ seashells on the beach. she gave Sam some of her seashells. She has ___B___ seashell left. How many seashells did she give to Sam ?",
+    "numbers": [
+      70,
+      27
+    ],
+    "lEquations": [
+      "70-x=27"
+    ],
+    "lSolutions": [
+      43.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "Joan found 70 seashells on the beach. she gave Sam some of her seashells. She has 27 seashell left. How many seashells did she give to Sam ?",
+    "iIndex": 0
+  },
+  "1": {
+    "question": "There were 28 bales of hay in the barn. Tim stacked more bales in the barn today. There are now 54 bales of hay in the barn. How many bales did he store in the barn ?",
+    "generic": "There were ___A___ bales of hay in the barn. Tim stacked more bales in the barn today. There are now ___B___ bales of hay in the barn. How many bales did he store in the barn ?",
+    "numbers": [
+      28,
+      54
+    ],
+    "lEquations": [
+      "28+x=54"
+    ],
+    "lSolutions": [
+      26.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "There were 28 bales of hay in the barn. Tim stacked more bales in the barn today. There are now 54 bales of hay in the barn. How many bales did he store in the barn ?",
+    "iIndex": 1
+  },
+  "2": {
+    "question": "After eating at the restaurant, Sally, Sam, and Alyssa decided to divide the bill evenly. If each person paid 45 dollars, what was the total of the bill ?",
+    "generic": "After eating at the restaurant, Sally, Sam, and Alyssa decided to divide the bill evenly. If each person paid ___A___ dollars, what was the total of the bill ?",
+    "numbers": [
+      45
+    ],
+    "lEquations": [
+      "45*3=x"
+    ],
+    "lSolutions": [
+      135.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "After eating at the restaurant, Sally, Sam, and Alyssa decided to divide the bill evenly. If each person paid 45 dollars, what was the total of the bill ?",
+    "iIndex": 2
+  },
+  "3": {
+    "question": "Mary is baking a cake. The recipe wants 8 cups of flour. She already put in 2 cups. How many more cups does she need to add ?",
+    "generic": "Mary is baking a cake. The recipe wants ___A___ cups of flour. She already put in ___B___ cups. How many more cups does she need to add ?",
+    "numbers": [
+      8,
+      2
+    ],
+    "lEquations": [
+      "8=2+x"
+    ],
+    "lSolutions": [
+      6.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "Mary is baking a cake. The recipe wants 8 cups of flour. She already put in 2 cups. How many more cups does she need to add ?",
+    "iIndex": 3
+  },
+  "4": {
+    "question": "Sara's high school played 12 basketball games this year. The team won most of their games. They were defeated during 4 games. How many games did they win ?",
+    "generic": "Sara's high school played ___A___ basketball games this year. The team won most of their games. They were defeated during ___B___ games. How many games did they win ?",
+    "numbers": [
+      12,
+      4
+    ],
+    "lEquations": [
+      "12=x+4"
+    ],
+    "lSolutions": [
+      8.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "Sara's high school played 12 basketball games this year. The team won most of their games. They were defeated during 4 games. How many games did they win ?",
+    "iIndex": 4
+  },
+  "5": {
+    "question": "There are 22 walnut trees currently in the park. Park workers will plant more walnut trees today. When the workers are finished there will be 55 walnut trees in the park. How many walnut trees did the workers plant today ?",
+    "generic": "There are ___A___ walnut trees currently in the park. Park workers will plant more walnut trees today. When the workers are finished there will be ___B___ walnut trees in the park. How many walnut trees did the workers plant today ?",
+    "numbers": [
+      22,
+      55
+    ],
+    "lEquations": [
+      "22+x=55"
+    ],
+    "lSolutions": [
+      33.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "There are 22 walnut trees currently in the park. Park workers will plant more walnut trees today. When the workers are finished there will be 55 walnut trees in the park. How many walnut trees did the workers plant today ?",
+    "iIndex": 5
+  },
+  "6": {
+    "question": "Mike had 34 peaches left at his roadside fruit stand. He went to the orchard and picked more peaches to stock up the stand. There are now 86 peaches at the stand, how many did he pick ?",
+    "generic": "Mike had ___A___ peaches left at his roadside fruit stand. He went to the orchard and picked more peaches to stock up the stand. There are now ___B___ peaches at the stand, how many did he pick ?",
+    "numbers": [
+      34,
+      86
+    ],
+    "lEquations": [
+      "34+x=86"
+    ],
+    "lSolutions": [
+      52.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "Mike had 34 peaches left at his roadside fruit stand. He went to the orchard and picked more peaches to stock up the stand. There are now 86 peaches at the stand, how many did he pick ?",
+    "iIndex": 6
+  },
+  "7": {
+    "question": "There were 6 roses in the vase. Mary cut some more roses from her flower garden. There are now 16 roses in the vase. How many roses did she cut ?",
+    "generic": "There were ___A___ roses in the vase. Mary cut some more roses from her flower garden. There are now ___B___ roses in the vase. How many roses did she cut ?",
+    "numbers": [
+      6,
+      16
+    ],
+    "lEquations": [
+      "6+x=16"
+    ],
+    "lSolutions": [
+      10.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "There were 6 roses in the vase. Mary cut some more roses from her flower garden. There are now 16 roses in the vase. How many roses did she cut ?",
+    "iIndex": 7
+  },
+  "8": {
+    "question": "Benny bought a soft drink for 2 dollars and 5 candy bars. He spent a total of 27 dollars. How much did each candy bar cost ?",
+    "generic": "Benny bought a soft drink for ___A___ dollars and ___B___ candy bars. He spent a total of ___C___ dollars. How much did each candy bar cost ?",
+    "numbers": [
+      2,
+      5,
+      27
+    ],
+    "lEquations": [
+      "2+(5*x)=27"
+    ],
+    "lSolutions": [
+      5.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "Benny bought a soft drink for 2 dollars and 5 candy bars. He spent a total of 27 dollars. How much did each candy bar cost ?",
+    "iIndex": 8
+  },
+  "9": {
+    "question": "Benny bought 4 new baseball trading cards to add to his collection. The next day his dog ate half of his collection. There are now only 34 cards left. How many cards did Benny start with ?",
+    "generic": "Benny bought ___A___ new baseball trading cards to add to his collection. The next day his dog ate half of his collection. There are now only ___B___ cards left. How many cards did Benny start with ?",
+    "numbers": [
+      4,
+      34
+    ],
+    "lEquations": [
+      "(x+4)/2=34"
+    ],
+    "lSolutions": [
+      64.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "Benny bought 4 new baseball trading cards to add to his collection. The next day his dog ate half of his collection. There are now only 34 cards left. How many cards did Benny start with ?",
+    "iIndex": 9
+  },
+  "10": {
+    "question": "Alyssa spent half of her allowance going to the movies. She washed the family car and earned 8 dollars. What is her weekly allowance if she ended with 12 dollars ?",
+    "generic": "Alyssa spent half of her allowance going to the movies. She washed the family car and earned ___A___ dollars. What is her weekly allowance if she ended with ___B___ dollars ?",
+    "numbers": [
+      8,
+      12
+    ],
+    "lEquations": [
+      "(x/2)+8=12"
+    ],
+    "lSolutions": [
+      8.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "Alyssa spent half of her allowance going to the movies. She washed the family car and earned 8 dollars. What is her weekly allowance if she ended with 12 dollars ?",
+    "iIndex": 10
+  },
+  "11": {
+    "question": "The sum of three consecutive even numbers is 162. What is the smallest of the three numbers ?",
+    "generic": "The sum of three consecutive even numbers is ___A___ What is the smallest of the three numbers ?",
+    "numbers": [
+      162.0
+    ],
+    "lEquations": [
+      "(3*x)+6=162"
+    ],
+    "lSolutions": [
+      52.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "The sum of three consecutive even numbers is 162. What is the smallest of the three numbers ?",
+    "iIndex": 11
+  },
+  "12": {
+    "question": "Sam had 79 dollars to spend on 9 books. After buying them he had 16 dollars. How much did each book cost ?",
+    "generic": "Sam had ___A___ dollars to spend on ___B___ books. After buying them he had ___C___ dollars. How much did each book cost ?",
+    "numbers": [
+      79,
+      9,
+      16
+    ],
+    "lEquations": [
+      "79-(9*x)=16"
+    ],
+    "lSolutions": [
+      7.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "Sam had 79 dollars to spend on 9 books. After buying them he had 16 dollars. How much did each book cost ?",
+    "iIndex": 12
+  },
+  "13": {
+    "question": "Oceanside Bike Rental Shop charges 17 dollars plus 7 dollars an hour for renting a bike. Tom paid 80 dollars to rent a bike. How many hours did he pay to have the bike checked out ?",
+    "generic": "Oceanside Bike Rental Shop charges ___A___ dollars plus ___B___ dollars an hour for renting a bike. Tom paid ___C___ dollars to rent a bike. How many hours did he pay to have the bike checked out ?",
+    "numbers": [
+      17,
+      7,
+      80
+    ],
+    "lEquations": [
+      "17+(7*x)=80"
+    ],
+    "lSolutions": [
+      9.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "Oceanside Bike Rental Shop charges 17 dollars plus 7 dollars an hour for renting a bike. Tom paid 80 dollars to rent a bike. How many hours did he pay to have the bike checked out ?",
+    "iIndex": 13
+  },
+  "14": {
+    "question": "On Monday, 375 students went on a trip to the zoo. All 7 buses were filled and 4 students had to travel in cars. How many students were in each bus ?",
+    "generic": "On Monday, ___A___ students went on a trip to the zoo. All ___B___ buses were filled and ___C___ students had to travel in cars. How many students were in each bus ?",
+    "numbers": [
+      375,
+      7,
+      4
+    ],
+    "lEquations": [
+      "375=(7*x)+4"
+    ],
+    "lSolutions": [
+      53.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "On Monday, 375 students went on a trip to the zoo. All 7 buses were filled and 4 students had to travel in cars. How many students were in each bus ?",
+    "iIndex": 14
+  },
+  "15": {
+    "question": "Sandy sold half of her comic books and then bought 6 more. She now has 13. How many did she begin with ?",
+    "generic": "Sandy sold half of her comic books and then bought ___A___ more. She now has ___B___ How many did she begin with ?",
+    "numbers": [
+      6,
+      13.0
+    ],
+    "lEquations": [
+      "(x/2)+6=13"
+    ],
+    "lSolutions": [
+      14.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "Sandy sold half of her comic books and then bought 6 more. She now has 13. How many did she begin with ?",
+    "iIndex": 15
+  },
+  "16": {
+    "question": "The sum of three consecutive odd numbers is 69. What is the smallest of the three numbers ?",
+    "generic": "The sum of three consecutive odd numbers is ___A___ What is the smallest of the three numbers ?",
+    "numbers": [
+      69.0
+    ],
+    "lEquations": [
+      "(3*x)+6=69"
+    ],
+    "lSolutions": [
+      21.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "The sum of three consecutive odd numbers is 69. What is the smallest of the three numbers ?",
+    "iIndex": 16
+  },
+  "17": {
+    "question": "Joan went to 4 football games this year. She went to 9 football games last year. How many football games did Joan go to in all ?",
+    "generic": "Joan went to ___A___ football games this year. She went to ___B___ football games last year. How many football games did Joan go to in all ?",
+    "numbers": [
+      4,
+      9
+    ],
+    "lEquations": [
+      "4+9=x"
+    ],
+    "lSolutions": [
+      13.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "Joan went to 4 football games this year. She went to 9 football games last year. How many football games did Joan go to in all ?",
+    "iIndex": 17
+  },
+  "18": {
+    "question": "Tom has 9 yellow balloons. Sara has 8 yellow balloons. How many yellow balloons do they have in total ?",
+    "generic": "Tom has ___A___ yellow balloons. Sara has ___B___ yellow balloons. How many yellow balloons do they have in total ?",
+    "numbers": [
+      9,
+      8
+    ],
+    "lEquations": [
+      "9+8=x"
+    ],
+    "lSolutions": [
+      17.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "Tom has 9 yellow balloons. Sara has 8 yellow balloons. How many yellow balloons do they have in total ?",
+    "iIndex": 18
+  },
+  "19": {
+    "question": "There are 4 walnut trees currently in the park. Park workers will plant 6 more walnut trees today. How many walnut trees will the park have when the workers are finished ?",
+    "generic": "There are ___A___ walnut trees currently in the park. Park workers will plant ___B___ more walnut trees today. How many walnut trees will the park have when the workers are finished ?",
+    "numbers": [
+      4,
+      6
+    ],
+    "lEquations": [
+      "4+6=x"
+    ],
+    "lSolutions": [
+      10.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "There are 4 walnut trees currently in the park. Park workers will plant 6 more walnut trees today. How many walnut trees will the park have when the workers are finished ?",
+    "iIndex": 19
+  },
+  "20": {
+    "question": "Sam had 9 dimes in his bank. His dad gave him 7 more dimes. How many dimes does Sam have now ?",
+    "generic": "Sam had ___A___ dimes in his bank. His dad gave him ___B___ more dimes. How many dimes does Sam have now ?",
+    "numbers": [
+      9,
+      7
+    ],
+    "lEquations": [
+      "9+7=x"
+    ],
+    "lSolutions": [
+      16.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "Sam had 9 dimes in his bank. His dad gave him 7 more dimes. How many dimes does Sam have now ?",
+    "iIndex": 20
+  },
+  "21": {
+    "question": "Alyssa's dog had puppies. She gave 7 to her friends.  She now has 5 puppies left. How many puppies did she have to start with ?",
+    "generic": "Alyssa's dog had puppies. She gave ___A___ to her friends. She now has ___B___ puppies left. How many puppies did she have to start with ?",
+    "numbers": [
+      7,
+      5
+    ],
+    "lEquations": [
+      "x-7=5"
+    ],
+    "lSolutions": [
+      12.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "Alyssa's dog had puppies. She gave 7 to her friends.  She now has 5 puppies left. How many puppies did she have to start with ?",
+    "iIndex": 21
+  },
+  "22": {
+    "question": "A restaurant served 9 pizzas during lunch and 6 during dinner today. How many pizzas were served today ?",
+    "generic": "A restaurant served ___A___ pizzas during lunch and ___B___ during dinner today. How many pizzas were served today ?",
+    "numbers": [
+      9,
+      6
+    ],
+    "lEquations": [
+      "9+6=x"
+    ],
+    "lSolutions": [
+      15.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "A restaurant served 9 pizzas during lunch and 6 during dinner today. How many pizzas were served today ?",
+    "iIndex": 22
+  },
+  "23": {
+    "question": "There are 2 pencils in the drawer. Tim placed 3 more pencils in the drawer. How many pencils are now there in total ?",
+    "generic": "There are ___A___ pencils in the drawer. Tim placed ___B___ more pencils in the drawer. How many pencils are now there in total ?",
+    "numbers": [
+      2,
+      3
+    ],
+    "lEquations": [
+      "2+3=x"
+    ],
+    "lSolutions": [
+      5.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "There are 2 pencils in the drawer. Tim placed 3 more pencils in the drawer. How many pencils are now there in total ?",
+    "iIndex": 23
+  },
+  "24": {
+    "question": "Joan found 6 seashells and Jessica found 8 seashells on the beach. How many seashells did they find together ?",
+    "generic": "Joan found ___A___ seashells and Jessica found ___B___ seashells on the beach. How many seashells did they find together ?",
+    "numbers": [
+      6,
+      8
+    ],
+    "lEquations": [
+      "6+8=x"
+    ],
+    "lSolutions": [
+      14.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "Joan found 6 seashells and Jessica found 8 seashells on the beach. How many seashells did they find together ?",
+    "iIndex": 24
+  },
+  "25": {
+    "question": "Sandy grew 6 carrots. Sam grew 3 carrots. How many carrots did they grow in total ?",
+    "generic": "Sandy grew ___A___ carrots. Sam grew ___B___ carrots. How many carrots did they grow in total ?",
+    "numbers": [
+      6,
+      3
+    ],
+    "lEquations": [
+      "6+3=x"
+    ],
+    "lSolutions": [
+      9.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "Sandy grew 6 carrots. Sam grew 3 carrots. How many carrots did they grow in total ?",
+    "iIndex": 25
+  },
+  "26": {
+    "question": "Benny picked 2 apples and Dan picked 9 apples from the apple tree. How many apples were picked in total ?",
+    "generic": "Benny picked ___A___ apples and Dan picked ___B___ apples from the apple tree. How many apples were picked in total ?",
+    "numbers": [
+      2,
+      9
+    ],
+    "lEquations": [
+      "2+9=x"
+    ],
+    "lSolutions": [
+      11.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "Benny picked 2 apples and Dan picked 9 apples from the apple tree. How many apples were picked in total ?",
+    "iIndex": 26
+  },
+  "27": {
+    "question": "Sally found 9 seashells, Tom found 7 seashells, and Jessica found 5 seashells on the beach. How many seashells did they find together ?",
+    "generic": "Sally found ___A___ seashells, Tom found ___B___ seashells, and Jessica found ___C___ seashells on the beach. How many seashells did they find together ?",
+    "numbers": [
+      9,
+      7,
+      5
+    ],
+    "lEquations": [
+      "9+7+5=x"
+    ],
+    "lSolutions": [
+      21.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "Sally found 9 seashells, Tom found 7 seashells, and Jessica found 5 seashells on the beach. How many seashells did they find together ?",
+    "iIndex": 27
+  },
+  "28": {
+    "question": "Tim's cat had kittens. He gave 3 to Jessica and 6 to Sara. He now has 9 kittens left. How many kittens did he have to start with ?",
+    "generic": "Tim's cat had kittens. He gave ___A___ to Jessica and ___B___ to Sara. He now has ___C___ kittens left. How many kittens did he have to start with ?",
+    "numbers": [
+      3,
+      6,
+      9
+    ],
+    "lEquations": [
+      "x-3-6=9"
+    ],
+    "lSolutions": [
+      18.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "Tim's cat had kittens. He gave 3 to Jessica and 6 to Sara. He now has 9 kittens left. How many kittens did he have to start with ?",
+    "iIndex": 28
+  },
+  "29": {
+    "question": "Joan has 9 blue balloons, Sally has 5 blue balloons, and Jessica has 2 blue balloons. How many blue balloons do they have in total ?",
+    "generic": "Joan has ___A___ blue balloons, Sally has ___B___ blue balloons, and Jessica has ___C___ blue balloons. How many blue balloons do they have in total ?",
+    "numbers": [
+      9,
+      5,
+      2
+    ],
+    "lEquations": [
+      "9+5+2=x"
+    ],
+    "lSolutions": [
+      16.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "Joan has 9 blue balloons, Sally has 5 blue balloons, and Jessica has 2 blue balloons. How many blue balloons do they have in total ?",
+    "iIndex": 29
+  },
+  "30": {
+    "question": "Melanie had 7 dimes in her bank. Her dad gave her 8 dimes and her mother gave her 4 dimes. How many dimes does Melanie have now ?",
+    "generic": "Melanie had ___A___ dimes in her bank. Her dad gave her ___B___ dimes and her mother gave her ___C___ dimes. How many dimes does Melanie have now ?",
+    "numbers": [
+      7,
+      8,
+      4
+    ],
+    "lEquations": [
+      "7+8+4=x"
+    ],
+    "lSolutions": [
+      19.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "Melanie had 7 dimes in her bank. Her dad gave her 8 dimes and her mother gave her 4 dimes. How many dimes does Melanie have now ?",
+    "iIndex": 30
+  },
+  "31": {
+    "question": "A restaurant served 5 cakes during lunch and 6 during dinner today. The restaurant served 3 cakes yesterday. How many cakes were served in total ?",
+    "generic": "A restaurant served ___A___ cakes during lunch and ___B___ during dinner today. The restaurant served ___C___ cakes yesterday. How many cakes were served in total ?",
+    "numbers": [
+      5,
+      6,
+      3
+    ],
+    "lEquations": [
+      "5+6+3=x"
+    ],
+    "lSolutions": [
+      14.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "A restaurant served 5 cakes during lunch and 6 during dinner today. The restaurant served 3 cakes yesterday. How many cakes were served in total ?",
+    "iIndex": 31
+  },
+  "32": {
+    "question": "Melanie picked 4 plums, Dan picked 9 plums, and Sally picked 3 plums from the plum tree. How many plums were picked in total ?",
+    "generic": "Melanie picked ___A___ plums, Dan picked ___B___ plums, and Sally picked ___C___ plums from the plum tree. How many plums were picked in total ?",
+    "numbers": [
+      4,
+      9,
+      3
+    ],
+    "lEquations": [
+      "4+9+3=x"
+    ],
+    "lSolutions": [
+      16.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "Melanie picked 4 plums, Dan picked 9 plums, and Sally picked 3 plums from the plum tree. How many plums were picked in total ?",
+    "iIndex": 32
+  },
+  "33": {
+    "question": "There are 7 dogwood trees currently in the park. Park workers will plant 3 more dogwood trees today and 2 more dogwood trees tomorrow. How many dogwood trees will the park have when the workers are finished ?",
+    "generic": "There are ___A___ dogwood trees currently in the park. Park workers will plant ___B___ more dogwood trees today and ___C___ more dogwood trees tomorrow. How many dogwood trees will the park have when the workers are finished ?",
+    "numbers": [
+      7,
+      3,
+      2
+    ],
+    "lEquations": [
+      "7+3+2=x"
+    ],
+    "lSolutions": [
+      12.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "There are 7 dogwood trees currently in the park. Park workers will plant 3 more dogwood trees today and 2 more dogwood trees tomorrow. How many dogwood trees will the park have when the workers are finished ?",
+    "iIndex": 33
+  },
+  "34": {
+    "question": "Sara grew 4 onions, Sally grew 5 onions, and Fred grew  9 onions. How many onions did they grow in all ?",
+    "generic": "Sara grew ___A___ onions, Sally grew ___B___ onions, and Fred grew ___C___ onions. How many onions did they grow in all ?",
+    "numbers": [
+      4,
+      5,
+      9
+    ],
+    "lEquations": [
+      "4+5+9=x"
+    ],
+    "lSolutions": [
+      18.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "Sara grew 4 onions, Sally grew 5 onions, and Fred grew  9 onions. How many onions did they grow in all ?",
+    "iIndex": 34
+  },
+  "35": {
+    "question": "Sam found 18 seashells and Mary found 47 seashells on the beach. How many seashells did they find together ?",
+    "generic": "Sam found ___A___ seashells and Mary found ___B___ seashells on the beach. How many seashells did they find together ?",
+    "numbers": [
+      18,
+      47
+    ],
+    "lEquations": [
+      "18+47=x"
+    ],
+    "lSolutions": [
+      65.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "Sam found 18 seashells and Mary found 47 seashells on the beach. How many seashells did they find together ?",
+    "iIndex": 35
+  },
+  "36": {
+    "question": "Sara picked 45 pears and Sally picked 11 pears from the pear tree. How many pears were picked in total ?",
+    "generic": "Sara picked ___A___ pears and Sally picked ___B___ pears from the pear tree. How many pears were picked in total ?",
+    "numbers": [
+      45,
+      11
+    ],
+    "lEquations": [
+      "45+11=x"
+    ],
+    "lSolutions": [
+      56.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "Sara picked 45 pears and Sally picked 11 pears from the pear tree. How many pears were picked in total ?",
+    "iIndex": 36
+  },
+  "37": {
+    "question": "Keith has 20 books. Jason has 21 books.  How many books do they have together ?",
+    "generic": "Keith has ___A___ books. Jason has ___B___ books. How many books do they have together ?",
+    "numbers": [
+      20,
+      21
+    ],
+    "lEquations": [
+      "20+21=x"
+    ],
+    "lSolutions": [
+      41.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "Keith has 20 books. Jason has 21 books.  How many books do they have together ?",
+    "iIndex": 37
+  },
+  "38": {
+    "question": "Jason had 49 quarters in his bank. His dad gave him 25 more quarters. How many quarters does he have now ?",
+    "generic": "Jason had ___A___ quarters in his bank. His dad gave him ___B___ more quarters. How many quarters does he have now ?",
+    "numbers": [
+      49,
+      25
+    ],
+    "lEquations": [
+      "49+25=x"
+    ],
+    "lSolutions": [
+      74.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "Jason had 49 quarters in his bank. His dad gave him 25 more quarters. How many quarters does he have now ?",
+    "iIndex": 38
+  },
+  "39": {
+    "question": "There are 33 walnut trees currently in the park. Park workers will plant  44 more walnut trees today. How many walnut trees will the park have when the workers are finished ?",
+    "generic": "There are ___A___ walnut trees currently in the park. Park workers will plant ___B___ more walnut trees today. How many walnut trees will the park have when the workers are finished ?",
+    "numbers": [
+      33,
+      44
+    ],
+    "lEquations": [
+      "33+44=x"
+    ],
+    "lSolutions": [
+      77.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "There are 33 walnut trees currently in the park. Park workers will plant  44 more walnut trees today. How many walnut trees will the park have when the workers are finished ?",
+    "iIndex": 39
+  },
+  "40": {
+    "question": "Sara had 21 quarters in her bank. Her dad gave her 49 more quarters. How many quarters does she have now ?",
+    "generic": "Sara had ___A___ quarters in her bank. Her dad gave her ___B___ more quarters. How many quarters does she have now ?",
+    "numbers": [
+      21,
+      49
+    ],
+    "lEquations": [
+      "21+49=x"
+    ],
+    "lSolutions": [
+      70.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "Sara had 21 quarters in her bank. Her dad gave her 49 more quarters. How many quarters does she have now ?",
+    "iIndex": 40
+  },
+  "41": {
+    "question": "There are 41 pencils in the drawer. Mike placed 30 more  pencils in the drawer. How many pencils are now there in total ?",
+    "generic": "There are ___A___ pencils in the drawer. Mike placed ___B___ more pencils in the drawer. How many pencils are now there in total ?",
+    "numbers": [
+      41,
+      30
+    ],
+    "lEquations": [
+      "41+30=x"
+    ],
+    "lSolutions": [
+      71.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "There are 41 pencils in the drawer. Mike placed 30 more  pencils in the drawer. How many pencils are now there in total ?",
+    "iIndex": 41
+  },
+  "42": {
+    "question": "Joan has 10 books. Tom has 38 books.  How many books do they have together ?",
+    "generic": "Joan has ___A___ books. Tom has ___B___ books. How many books do they have together ?",
+    "numbers": [
+      10,
+      38
+    ],
+    "lEquations": [
+      "10+38=x"
+    ],
+    "lSolutions": [
+      48.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "Joan has 10 books. Tom has 38 books.  How many books do they have together ?",
+    "iIndex": 42
+  },
+  "43": {
+    "question": "Joan has 40 blue balloons Melanie has 41 blue balloons. How many blue balloons do they have in total ?",
+    "generic": "Joan has ___A___ blue balloons Melanie has ___B___ blue balloons. How many blue balloons do they have in total ?",
+    "numbers": [
+      40,
+      41
+    ],
+    "lEquations": [
+      "40+41=x"
+    ],
+    "lSolutions": [
+      81.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "Joan has 40 blue balloons Melanie has 41 blue balloons. How many blue balloons do they have in total ?",
+    "iIndex": 43
+  },
+  "44": {
+    "question": "Fred grew 38 cantelopes. Tim grew 44 cantelopes. How many cantelopes did they grow in total ?",
+    "generic": "Fred grew ___A___ cantelopes. Tim grew ___B___ cantelopes. How many cantelopes did they grow in total ?",
+    "numbers": [
+      38,
+      44
+    ],
+    "lEquations": [
+      "38+44=x"
+    ],
+    "lSolutions": [
+      82.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "Fred grew 38 cantelopes. Tim grew 44 cantelopes. How many cantelopes did they grow in total ?",
+    "iIndex": 44
+  },
+  "45": {
+    "question": "Sam went to 14 football games this year. He went to 29 games  last year. How many football games did Sam go to in all ?",
+    "generic": "Sam went to ___A___ football games this year. He went to ___B___ games last year. How many football games did Sam go to in all ?",
+    "numbers": [
+      14,
+      29
+    ],
+    "lEquations": [
+      "14+29=x"
+    ],
+    "lSolutions": [
+      43.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "Sam went to 14 football games this year. He went to 29 games  last year. How many football games did Sam go to in all ?",
+    "iIndex": 45
+  },
+  "46": {
+    "question": "Mary found 18 seashells and Jessica found 41 seashells on the beach. How many seashells did they find together ?",
+    "generic": "Mary found ___A___ seashells and Jessica found ___B___ seashells on the beach. How many seashells did they find together ?",
+    "numbers": [
+      18,
+      41
+    ],
+    "lEquations": [
+      "18+41=x"
+    ],
+    "lSolutions": [
+      59.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "Mary found 18 seashells and Jessica found 41 seashells on the beach. How many seashells did they find together ?",
+    "iIndex": 46
+  },
+  "47": {
+    "question": "There are 39 dogwood trees currently in the park. Park workers will plant  41 more dogwood trees today and 20 more dogwood trees tomorrow. How many dogwood trees will the park have when the workers are finished ?",
+    "generic": "There are ___A___ dogwood trees currently in the park. Park workers will plant ___B___ more dogwood trees today and ___C___ more dogwood trees tomorrow. How many dogwood trees will the park have when the workers are finished ?",
+    "numbers": [
+      39,
+      41,
+      20
+    ],
+    "lEquations": [
+      "39+41+20=x"
+    ],
+    "lSolutions": [
+      100.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "There are 39 dogwood trees currently in the park. Park workers will plant  41 more dogwood trees today and 20 more dogwood trees tomorrow. How many dogwood trees will the park have when the workers are finished ?",
+    "iIndex": 47
+  },
+  "48": {
+    "question": "Sandy has 10 books, Benny has 24 books, and Tim has  33 books. How many books do they have together ?",
+    "generic": "Sandy has ___A___ books, Benny has ___B___ books, and Tim has ___C___ books. How many books do they have together ?",
+    "numbers": [
+      10,
+      24,
+      33
+    ],
+    "lEquations": [
+      "10+24+33=x"
+    ],
+    "lSolutions": [
+      67.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "Sandy has 10 books, Benny has 24 books, and Tim has  33 books. How many books do they have together ?",
+    "iIndex": 48
+  },
+  "49": {
+    "question": "Jason picked 46 pears, Keith picked 47 pears, and Mike picked  12 pears from the pear tree. How many pears were picked in total ?",
+    "generic": "Jason picked ___A___ pears, Keith picked ___B___ pears, and Mike picked ___C___ pears from the pear tree. How many pears were picked in total ?",
+    "numbers": [
+      46,
+      47,
+      12
+    ],
+    "lEquations": [
+      "46+47+12=x"
+    ],
+    "lSolutions": [
+      105.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "Jason picked 46 pears, Keith picked 47 pears, and Mike picked  12 pears from the pear tree. How many pears were picked in total ?",
+    "iIndex": 49
+  },
+  "50": {
+    "question": "Keith grew 29 cantelopes, Fred grew 16 cantelopes, and Jason grew  20 cantelopes. How many cantelopes did they grow in total ?",
+    "generic": "Keith grew ___A___ cantelopes, Fred grew ___B___ cantelopes, and Jason grew ___C___ cantelopes. How many cantelopes did they grow in total ?",
+    "numbers": [
+      29,
+      16,
+      20
+    ],
+    "lEquations": [
+      "29+16+20=x"
+    ],
+    "lSolutions": [
+      65.0
+    ],
+    "grammarCheck": 0,
+    "templateNumber": 0,
+    "sQuestion": "Keith grew 29 cantelopes, Fred grew 16 cantelopes, and Jason grew  20 cantelopes. How many cantelopes did they grow in total ?",
+    "iIndex": 50
+  }
+}
