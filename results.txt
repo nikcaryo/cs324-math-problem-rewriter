@@ -1,0 +1,117 @@
+original problem 
+
+Joan found 70 seashells on the beach. she gave Sam some of her seashells. She has 27 seashell left. How many seashells did she give to Sam ?
+===== 0 - sports =======
+rewritten for theme:  sports 
+
+Ethan gathered 70 baseballs from the sports field. He gave some of his baseballs to Brad. He has 27 baseballs left. How many baseballs did he give to Brad?
+
+===== 0 - cats =======
+rewritten for theme:  cats 
+
+Tommy found 70 cats in his backyard. He gave Felix some of his cats. He has 27 cats left. How many cats did he give to Felix?
+
+===== 0 - unicorns =======
+rewritten for theme:  unicorns 
+
+Max found 70 magical horns on the meadow. He gave Bethany some of his horns. He has 27 horns left. How many horns did he give to Bethany?
+
+===== 0 - art =======
+rewritten for theme:  art 
+
+Garth found 70 pieces of fabric at the craft store. He gave Kim some of his fabric. He has 27 pieces of fabric left. How many pieces of fabric did he give to Kim?
+
+original problem 
+
+There were 28 bales of hay in the barn. Tim stacked more bales in the barn today. There are now 54 bales of hay in the barn. How many bales did he store in the barn ?
+===== 1 - sports =======
+rewritten for theme:  sports 
+
+There were 28 basketballs in the gymnasium. The coach added more basketballs in the gym today. There are now 54 basketballs in the gymnasium. How many basketballs did the coach add?
+
+===== 1 - cats =======
+rewritten for theme:  cats 
+
+There were 28 packages of cat food in the pantry. Fluffy the cat stacked more packages in the pantry today. There are now 54 packages of cat food in the pantry. How many packages did Fluffy stack in the pantry?
+
+===== 1 - unicorns =======
+rewritten for theme:  unicorns 
+
+There were 28 bales of hay in the meadow. Rainbow Dash stacked more bales in the meadow today. There are now 54 bales of hay in the meadow. How many bales did she store in the meadow?
+
+===== 1 - art =======
+rewritten for theme:  art 
+
+There were 28 paintings in the gallery. Sarah hung more paintings in the gallery today. There are now 54 paintings in the gallery. How many paintings did she hang in the gallery?
+
+original problem 
+
+After eating at the restaurant, Sally, Sam, and Alyssa decided to divide the bill evenly. If each person paid 45 dollars, what was the total of the bill ?
+===== 2 - sports =======
+rewritten for theme:  sports 
+
+After watching the game, John, Jack, and James decided to divide the ticket costs evenly. If each person paid 45 dollars, what was the total of the ticket cost ?
+
+===== 2 - cats =======
+rewritten for theme:  cats 
+
+After their visit to the veterinarian, Jackson and his two cats decided to divide the bill evenly. If each party paid 45 dollars, what was the total of the bill?
+
+===== 2 - unicorns =======
+rewritten for theme:  unicorns 
+
+After grazing in the meadow, three unicorns decided to divide the cost of food evenly. If each unicorn paid 45 dollars, what was the total cost of the food?
+
+===== 2 - art =======
+rewritten for theme:  art 
+
+After visiting the art museum, Sally, Sam, and Alyssa decided to divide the admission fee evenly. If each person paid 45 dollars, what was the total of the admission fee?
+
+New Theme - concert:
+
+original problem 
+
+Mary is baking a cake. The recipe wants 8 cups of flour. She already put in 2 cups. How many more cups does she need to add ?
+===== 3 - sports =======
+rewritten for theme:  sports 
+
+Sarah is making cookies. The recipe wants 8 cups of sugar. She already put in 2 cups. How many more cups does she need to add?
+
+===== 3 - cats =======
+rewritten for theme:  cats 
+
+Tom is baking a treat for all the cats. The recipe wants 8 cups of catnip. He already added 2 cups. How many more cups does he need to add?
+
+===== 3 - unicorns =======
+rewritten for theme:  unicorns 
+
+Rainbow is making magical cupcakes. The recipe wants 8 cups of glitter. She already put in 2 cups. How many more cups does she need to add?
+
+===== 3 - art =======
+rewritten for theme:  art 
+
+Carla is drawing a picture. The instructions say she needs 8 pens of different colours. She already used 2 pens. How many more pens does she need to use?
+
+original problem 
+
+Sara's high school played 12 basketball games this year. The team won most of their games. They were defeated during 4 games. How many games did they win ?
+===== 4 - sports =======
+rewritten for theme:  sports 
+
+The soccer team played 12 games this year. They won most of their matches. They were defeated during 4 games. How many games did they win?
+
+===== 4 - cats =======
+rewritten for theme:  cats 
+
+Dave’s cats played 12 basketball games this year. They pounced and leaped and won most of their games. They were defeated during 4 games. How many games did they win?
+
+===== 4 - unicorns =======
+rewritten for theme:  unicorns 
+
+Unicorn Kingdom's team played 12 magical games this year. The team won most of their games. They were defeated during 4 games. How many games did they win ?
+
+===== 4 - art =======
+rewritten for theme:  art 
+
+Sara's museum had 12 art galleries this year. Most of the pieces were admired by the visitors. They were disliked during 4 galleries. How many galleries were admired by the visitors?
+
