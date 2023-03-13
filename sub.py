@@ -1,11 +1,12 @@
 import re
 import json
+import prompts
 
 numeric_const_pattern = '[-+]? (?: (?: \d* \. \d+ ) | (?: \d+ \.? ) )(?: [Ee] [+-]? \d+ ) ?'
 rx = re.compile(numeric_const_pattern, re.VERBOSE)
 
-token_delim = "___"
-token_pattern = fr'{token_delim}.*{token_delim}'
+TOKEN_DELIM = "___" # default prompts.token_v1
+token_pattern = fr'{TOKEN_DELIM}.*{TOKEN_DELIM}'
 rx2 = re.compile(token_pattern, re.VERBOSE)
 
 
@@ -23,7 +24,7 @@ def problem_to_generic(s):
       floats = get_floats("".join(filter(lambda x: x != ',', word)))
       if floats:
         assert(len(floats) == 1)
-        result.append(rx.sub(f"{token_delim}{chr(ord('A') + count)}{token_delim}", word))
+        result.append(rx.sub(f"{TOKEN_DELIM}{chr(ord('A') + count)}{TOKEN_DELIM}", word))
         try:
           nums.append(int(floats[0]))
         except:
