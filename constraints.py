@@ -34,10 +34,10 @@ def is_command(s):
            return random.randint(*list(map(int, "".join(filter(lambda x: x.isdigit() or x == ",", s)).split(',') )))
   return None
 
-def parse_constraints(constraints_textbox):
+def parse_constraints(constraints_textbox, split_char='\n'):
   # Evaluate constants
   # Order by 
-  lines = constraints_textbox.strip().split('\n')
+  lines = constraints_textbox.strip().split(split_char)
   popped_one = True
 
   locals = {}
@@ -83,6 +83,13 @@ def parse_constraints(constraints_textbox):
     return locals
   else:
      raise(Exception('Bad!'))
+  
+def default_constraint_text(constraints):
+  t = []
+  for i, num in enumerate(constraints):
+    letter = chr(i + ord('A'))
+    t.append(f"{letter} = {num}")
+  return ", ".join(t) + ", answer = ?"
 
 
 if __name__ == "__main__":
