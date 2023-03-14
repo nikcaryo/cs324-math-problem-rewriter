@@ -21,10 +21,10 @@ from st_aggrid import AgGrid
 # # for a full prompt pipeline, see main.py
 
 # basic flow
-# - generic, original_numbers = sub.problem_to_generic(problem)
-# - rewritten_generic, critique (if any) = rewrite_and_revise(generic, theme)
-# - intro = add_intro(rewritten_generic)
-# - new_numbers = parse_constraints(constraints)
+# - generic, original_numbers = sub.problem_to_generic(problem) # Ben had 3 dogs. He got 2 more. How many does he have
+# - rewritten_generic, critique (if any) = rewrite_and_revise(generic, theme) # revised: Stacy has 3 cats, rewritten: Stacy the Crazy Cat lady has 3 cats. How many does she have, critique: Crazy cat lady is a harmful term
+# - intro = add_intro(rewritten_generic) # (nice to have)
+# - new_numbers = parse_constraints(constraints) # 3->4
 # - rewritten = sub.generic_to_problem(rewritten_generic, new_numbers)
 # - final result = (rewritten, new answer, GPT generated critiques we had/have for this problem)
 
