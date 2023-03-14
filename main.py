@@ -124,7 +124,14 @@ if __name__ == '__main__':
   # batch('questions_with_generics_50.json', 5, themes)
   # demo()
   for theme in themes + ['baseball']:
-    problem = "Sam went to 14 football games this year. He went to 29 games  last year. How many football games did Sam go to in all?"
+    # problem = "Sam went to 14 football games this year. He went to 29 games  last year. How many football games did Sam go to in all?"
+    problem= """The table below show the points Janet scored on a video game each time she played.
+Game # | Points Scored
+1 | 155
+2 | 150
+3 | 180
+After the first 3 games, she took a break and came back the next day and scored 2 times as many points as she had during all the previous games combined. How many more points did she score after her break?
+"""
     x = one_off(problem, theme)
     
     # intro_prompt = prompts.write_intro_v1(x)

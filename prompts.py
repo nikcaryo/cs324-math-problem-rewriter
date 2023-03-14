@@ -197,7 +197,7 @@ Intro:
   return x  
 
 def write_intro_v2(problem, token=token_v1):
-  x = f"""Write a creative and interesting introduction to each math problem. Do not include any numbers or math concepts in the intro.
+  x = f"""Write a creative and interesting introduction to each math problem. Do not include any numbers or math concepts in the intro (e.g. ').
 -----
 Problem:
 Duane strolled {token('A')} of a mile from his barn to Madeline’s camp and {token('B')} of a mile from Madeline’s camp to his own camp. How many miles did Duane stroll in all?
@@ -223,3 +223,16 @@ Problem:
 Intro (good):
 """
   return x  
+
+
+# Problem:
+# Game # | Points Scored
+# ___A___ | ___B___
+# ___C___ | ___D___
+# ___E___ | ___F___
+# After the first ___G___ games, he took a break and came back the next day and scored ___H___ times as many points as he had during all the previous games combined. How many more points did he score after his break?
+
+# Intro (good):
+# John loved playing various video games and one of his favorites was unicorn racing. He was determined to get better and better each time he played. As he improved, his score climbed higher and higher. After the first ___G___ games, he decided to take a break. Little did he know that, when he came back the next day, his score would skyrocket! Can you help him figure out how many more points he scored after his break?
+
+# Please rewrite that to not include ___G___.
