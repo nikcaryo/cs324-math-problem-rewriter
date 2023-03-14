@@ -22,19 +22,45 @@ service = RemoteService("https://crfm-models.stanford.edu")
 problems = json.load(open('problems.json'))
 themes = ["sports", "cats", "unicorns", "art"]
 
+def rewrite_and_revise(original_problem, theme, token_fn = prompts.token_v1, prompt_fn = prompts.scaled_results_v1, revise_yes_no_fn = prompts.yes_no_critique_v1, revise_fn = prompts.revision_critique_v1 , **kwargs):
+  rewrite_prompt = prompt_fn(original_problem, theme, token=token_fn)
+  request = Request(model="openai/text-davinci-003", prompt=rewrite_prompt, echo_prompt=False, temperature=.3)
+  request_result: RequestResult = service.make_request(auth, request)
+  result = request_result.completions[0].text
+  rewritten_problem = result[:result.find("==")]
+
+  critique_prompt = revise_yes_no_fn(original_problem, rewritten_problem, theme, token=token_fn)
+  request = Request(model="openai/text-davinci-003", prompt=critique_prompt, echo_prompt=False)
+  request_result: RequestResult = service.make_request(auth, request)
+  result = request_result.completions[0].text
+  critique = result[:result.find("==")]
+
+  if not critique.lower().startswith('y'):
+    print('no critique', critique)
+    return rewritten_problem
+  print('got critique!', rewritten_problem, critique)
+  revise_prompt = revise_fn(original_problem, rewritten_problem, theme, critique, token=token_fn)
+  request = Request(model="openai/text-davinci-003", prompt=revise_prompt, echo_prompt=False)
+  request_result: RequestResult = service.make_request(auth, request)
+  result = request_result.completions[0].text
+  revision = result[:min(result.find("END"), result.find('----'))]
+  return revision
+
 
 def one_off(problem, theme):
   subbed_problem, nums = sub.problem_to_generic(problem)
-  prompt = prompts.scaled_results_v1(subbed_problem, theme)
+  # prompt = prompts.scaled_results_v1(subbed_problem, theme)
 
-  print(subbed_problem, nums)
+  # print(subbed_problem, nums)
 
-  request = Request(model="openai/text-davinci-003", prompt=prompt, echo_prompt=False)
-  request_result: RequestResult = service.make_request(auth, request)
-  result = request_result.completions[0].text
-  result = result[:result.find("==")]
+  # request = Request(model="openai/text-davinci-003", prompt=prompt, echo_prompt=False)
+  # request_result: RequestResult = service.make_request(auth, request)
+  # result = request_result.completions[0].text
+  # result = 
+  
+  result = rewrite_and_revise(subbed_problem, theme)
   print(sub.generic_to_problem(result, nums))
-  return re
+  return result
 
 def demo():
   question = {
@@ -96,4 +122,17 @@ def batch(question_file, k, themes):
   
 if __name__ == '__main__':
   # batch('questions_with_generics_50.json', 5, themes)
-  demo()
+  # demo()
+  for theme in themes + ['baseball']:
+    problem = "Sam went to 14 football games this year. He went to 29 games  last year. How many football games did Sam go to in all?"
+    x = one_off(problem, theme)
+    
+    # intro_prompt = prompts.write_intro_v1(x)
+    intro_prompt = prompts.write_intro_v2(x)
+    request = Request(model="openai/text-davinci-003", prompt=intro_prompt, echo_prompt=False)
+    request_result: RequestResult = service.make_request(auth, request)
+    intro = request_result.completions[0].text
+    intro = intro[:intro.find('\n')]
+    print(problem)    
+    print(intro)
+    print(x)
