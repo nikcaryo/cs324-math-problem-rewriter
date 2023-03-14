@@ -1,6 +1,5 @@
 import re
 import json
-import prompts
 
 numeric_const_pattern = '[-+]? (?: (?: \d* \. \d+ ) | (?: \d+ \.? ) )(?: [Ee] [+-]? \d+ ) ?'
 rx = re.compile(numeric_const_pattern, re.VERBOSE)

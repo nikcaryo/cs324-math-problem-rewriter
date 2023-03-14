@@ -1,6 +1,6 @@
 {
   "0": {
-    "question": "Joan found 70 seashells on the beach. she gave Sam some of her seashells. She has 27 seashell left. How many seashells did she give to Sam ?",
+    "question": "Joan found 70 seashells on the beach. \nshe gave Sam some of her seashells. She has 27 seashell left. How many seashells did she give to Sam ?",
     "generic": "Joan found ___A___ seashells on the beach. she gave Sam some of her seashells. She has ___B___ seashell left. How many seashells did she give to Sam ?",
     "numbers": [
       70,
