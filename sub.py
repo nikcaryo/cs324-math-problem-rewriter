@@ -4,7 +4,7 @@ import json
 numeric_const_pattern = '[-+]? (?: (?: \d* \. \d+ ) | (?: \d+ \.? ) )(?: [Ee] [+-]? \d+ ) ?'
 rx = re.compile(numeric_const_pattern, re.VERBOSE)
 
-TOKEN_DELIM = "___" # default prompts.token_v1
+TOKEN_DELIM = "--" # default prompts.token_v1
 token_pattern = fr'{TOKEN_DELIM}.*{TOKEN_DELIM}'
 rx2 = re.compile(token_pattern, re.VERBOSE)
 
@@ -37,7 +37,6 @@ def problem_to_generic(s):
 def generic_to_problem(s, args):
   count = 0
   lines = []
-  
   for line in s.split('\n'):
     result = []
     for word in line.split():

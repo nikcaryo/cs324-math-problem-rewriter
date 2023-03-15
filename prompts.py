@@ -212,10 +212,10 @@ Problem:
 Alyssa has {token('A')} blue balloons, Sandy has {token('B')} blue balloons, and Sally has {token('C')} blue balloons. How many blue balloons do they have in all ?
 
 Intro (good):
-The three best friends, Alyssa, Sandy, and Sally, were planning a surprise birthday party for their other best friend, Bella. They wanted to make sure the decorations were perfect, especially the balloons.  They were all so excited to blow them up and decorate the room with them. However, before they could start decorating, they had to figure out how many blue balloons they had in total. Can you help them figure it out?
+The three best friends, Alyssa, Sandy, and Sally, were planning a surprise birthday party for their other best friend, Bella. They wanted to make sure the decorations were perfect, especially the balloons.  They were all so excited to blow them up and decorate the room with them. However, before they could start decorating, they had to figure out how many blue balloons they had in total.
 
 Intro (bad):
-The three best friends, Alyssa, Sandy, and Sally, were planning a surprise birthday party for their other best friend, Bella. They wanted to make sure the decorations were perfect, especially the balloons.  They were all so excited to blow them up and decorate the room with them. However, before they could start decorating, they had to figure out how many blue balloons they had in total. Alyssa brought {token('A')} blue balloons, Sandy brought {token('B')} blue balloons, and Sally brought {token('C')} blue balloons. Can you help them figure it out?
+The three best friends, Alyssa, Sandy, and Sally, were planning a surprise birthday party for their other best friend, Bella. They wanted to make sure the decorations were perfect, especially the balloons.  They were all so excited to blow them up and decorate the room with them. However, before they could start decorating, they had to figure out how many blue balloons they had in total. Alyssa brought {token('A')} blue balloons, Sandy brought {token('B')} blue balloons, and Sally brought {token('C')} blue balloons.
 _____
 Problem:
 {problem}
@@ -224,14 +224,48 @@ Intro (good):
 """
   return x  
 
+import re
+from sub import TOKEN_DELIM
+token_pattern = fr'{TOKEN_DELIM}.*{TOKEN_DELIM}'
+rx2 = re.compile(token_pattern, re.VERBOSE)
 
-# Problem:
-# Game # | Points Scored
-# ___A___ | ___B___
-# ___C___ | ___D___
-# ___E___ | ___F___
-# After the first ___G___ games, he took a break and came back the next day and scored ___H___ times as many points as he had during all the previous games combined. How many more points did he score after his break?
+def intro_check_for_numbers_v1(intro):
+  results = rx2.findall(intro)
+  if not results:
+    return None
+  
+  tokens = []
+  for word in intro.split():
+    if rx2.findall(word):
+      tokens.append(rx2.findall(word)[0])
 
+  x = f"""Please rewrite the following intro to not include the following symbols:  --A--, --G--
+Intro:
+John loved playing various video games and one of his favorites was unicorn racing. He was determined to get better and better each time he played. As he improved, his score climbed higher and higher. After the first --G-- games, he decided to take a break. Little did he know that, when he came back the next day, his score would skyrocket by --A-- points!
+Rewritten:
+John enjoys playing video games, particularly unicorn racing, and he wants to improve his performance every time he plays. After playing some games, he decided to take a break. When he resumed playing the next day, his score significantly increased.
+----
+Please rewrite the following intro to not include the following symbols:  --A--, --B--, --C--
+Intro:
+Sandy, Benny, and Tim were all avid cat lovers, and their homes were full of furry friends. Sandy had --A-- cats, Benny had --B-- cats, and Tim had --C-- cats. They all wanted to figure out how many cats they had together, so they decided to add up the numbers.
+Rewritten:
+Sandy, Benny, and Tim were all avid cat lovers, and their homes were full of furry friends. They all wanted to figure out how many cats they had together, so they decided to add up the numbers.
+
+Please rewrite the following intro to not include the following symbols: {", ".join(set(tokens))}
+
+Intro:
+{intro}
+
+Rewritten:
+  """
+  return x
+
+z = """
+Duane was a cowboy who lived on a sprawling ranch in the heart of the Wild West. One day, he decided to visit his friend Madeline, who had set up camp --A-- of a mile away. As he walked, he couldn't help but admire the beauty of the open range and the majestic mountains looming in the distance.
+
+"""
+
+# print(intro_check_for_numbers_v1(z)) # Duane was a cowboy who lived on a sprawling ranch in the heart of the Wild West. One day, he decided to visit his friend Madeline, who had set up camp a certain distance away. As he walked, he couldn't help but admire the beauty of the open range and the majestic mountains looming in the distance.
 # Intro (good):
 # John loved playing various video games and one of his favorites was unicorn racing. He was determined to get better and better each time he played. As he improved, his score climbed higher and higher. After the first ___G___ games, he decided to take a break. Little did he know that, when he came back the next day, his score would skyrocket! Can you help him figure out how many more points he scored after his break?
 

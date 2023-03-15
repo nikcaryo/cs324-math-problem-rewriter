@@ -1,6 +1,7 @@
 import random
+import random
 
-commands = ["randint"]
+commands = ["randint", "rand"]
 
 import ast, math
 
@@ -27,11 +28,13 @@ def evaluate(expr, locals = {}):
         return eval(compile(node, "<string>", "eval"), {'__builtins__': None}, locals)
     except Exception: raise ValueError(expr)
 
-def is_command(s):
+def is_command(command_string):
   for command in commands:
-     if s.startswith(command + '(') and s.endswith(')'):
+     if command_string.startswith(command + '(') and command_string.endswith(')'):
         if command == 'randint':
-           return random.randint(*list(map(int, "".join(filter(lambda x: x.isdigit() or x == ",", s)).split(',') )))
+          return random.randint(*list(map(int, "".join(filter(lambda x: x.isdigit() or x == ",", command_string)).split(',') )))
+        if command == 'rand':
+          return round(random.uniform(*list(map(int, "".join(filter(lambda x: x.isdigit() or x == ",", command_string)).split(',') ))), 1)
   return None
 
 def parse_constraints(constraints_textbox, split_char='\n'):
@@ -70,14 +73,11 @@ def parse_constraints(constraints_textbox, split_char='\n'):
       letter = letter.strip()
       expression = expression.strip()
       try:
-        print(expression)
-        print(locals)
         locals[letter] = evaluate(expression.strip(), locals=locals)
         lines.pop(i)
         popped_one = True
         break
       except ValueError as e:
-        raise(e)
         pass
   if not lines:
     return locals
@@ -92,7 +92,7 @@ def default_constraint_text(constraints):
   return ", ".join(t) + ", answer = ?"
 
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
   # try:
   #   parse_constraints("""C = A + B
   #   A = 1
@@ -116,4 +116,4 @@ if __name__ == "__main__":
   #   answer = A * B + D * C
   #   """))
   
-  print(parse_constraints("A=randint(20,40)\nB=2*A\nanswer= 2 * A - B"))
+  # print(parse_constraints("A=randint(20,40)\nB=2*A\nC=rand(2,4)\nanswer= 2 * C - B"))
