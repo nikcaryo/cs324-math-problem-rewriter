@@ -6,7 +6,7 @@ def token_v1(s, token_delim=sub.TOKEN_DELIM):
   return f"{token_delim}{s}{token_delim}"
 
 def scaled_results_v1(problem, theme, token = token_v1):
-  x = f"""A math word problem is a coherent story that provides the student with good clues to the cor- rect mathematical operations between the numerical quantities described therein. However, the particular theme of a problem, whether it be about collecting apples or traveling distances through space, can vary significantly so long as the correlation between the story and underlying equation is maintained.
+  x = f"""A math word problem is a coherent story that provides the student with good clues to the correct mathematical operations between the numerical quantities described therein. However, the particular theme of a problem, whether it be about collecting apples or traveling distances through space, can vary significantly so long as the correlation between the story and underlying equation is maintained.
 
 Here are some examples:
 ------------------------
@@ -25,9 +25,9 @@ New Theme - Western:
 ==Good==
 Duane strolled {token('A')} of a mile from his barn to Madeline’s camp and {token('B')} of a mile from Madeline’s camp to his own camp. How many miles did Duane stroll in all?
 ==Good==
-Cowboy Chris rode {token('A')} of a mile from his ranch to Sheriff Sarah’s town and {token('B')} of a mile from Sherrif Sarah’s town to his own. How many miles did Cowboy Chris stroll in all?
+Traveler Alex journeyed {token('A')} of a mile from their homestead to Sheriff Jamie's town and {token('B')} of a mile from Sheriff Jamie's town to their own homestead. How many miles did Traveler Alex journey in all?
 ==Bad==
-Cowboy Chris rode {token('A')} of a mile from his ranch to Sheriff Sarah’s town and {token('B')} of a mile from Sherrif Sarah’s town to his own. He then rode {token('C')} more miles to wrangle some sheep. How many miles did Cowboy Chris stroll in all?
+Traveler Alex journeyed {token('A')} of a mile from their homestead to Sheriff Jamie's town and {token('B')} of a mile from Sheriff Jamie's town to their own homestead. They then rode {token('C')} more miles to wrangle some sheep. How many miles did Traveler Alex journey in all?
 ------------------------
 Original Problem:
 {problem}
@@ -91,7 +91,7 @@ Duane strolled {token('A')} of a mile from his barn to Madeline’s camp and {to
 Assistant:
 Yes, here is the rewritten problem
 
-Traveler Alex journeyed {token('A')} of a mile from their homestead to Sheriff Jamie's town and {token('B')} of a mile from Sheriff Jamie's town to their own homestead. How many miles did Traveler Alex journey in all?
+Cowboy Chris journeyed {token('A')} of a mile from their homestead to Sheriff Steve's town and {token('B')} of a mile from Sheriff Steve's town to their own homestead. How many miles did Cowboy Chris journey in all?
 
 Critique Request:
 Evaluate the problem for it’s inclusiveness towards all genders and types of people, and any use of harmful language. If major critiques are found, reply "Yes" followed by the critique. If no major critiques are found, reply "None found":

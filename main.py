@@ -122,8 +122,9 @@ def one_off(problem, theme, constraints_string, helm_key, include_intro=True):
     # request_result: RequestResult = service.make_request(auth, request)
     # result = request_result.completions[0].text
     # result =
-
     rewritten, critique, revision, intro, combined = rewrite_and_revise(subbed_problem, theme, helm_key, include_intro=include_intro)
+    print(rewritten, critique, revision, intro, combined)
+
     num_dict = constraints.parse_constraints(constraints_string, split_char='|')
     new_nums = list(num_dict.values())
     rewritten = sub.generic_to_problem(rewritten, new_nums)
