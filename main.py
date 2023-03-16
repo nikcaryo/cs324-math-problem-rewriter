@@ -224,9 +224,10 @@ if __name__ == "__main__":
         # problem = "Sam went to 14 football games this year. He went to 29 games  last year. How many football games did Sam go to in all?"
 
         # rewritten: the straight up rewritten problem
-        # critique: the critique if there is one, else None. Should have the "Yes." cut off
+        # critique: the critique if there is one, else None. Should have the "Yes." cut off. Could be displayed to user along with original rewrite
         # revision: None if no revision, otherwise, the revised problem
         # intro: None if no intro asked for, otherwise, the intro to the problem that shouldn't contain any numbers
+        # combined: (intro and rewritten/revision) combined via gpt
         # answer: if the constraints_string has an 'answer=(expression)' then answer will be the evaluated expression, else None.
         rewritten, critique, revision, intro, combined, answer = one_off(problem, theme, constraints_string, helm_key)
         print('-----')
