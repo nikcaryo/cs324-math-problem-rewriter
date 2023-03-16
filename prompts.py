@@ -14,30 +14,26 @@ Original Problem:
 Jim walked {token('A')} of a mile from school to David’s house and {token('B')} of a mile from David’s house to his own house. How many miles did Jim walk in all?
 
 New theme - Star Wars:
-==Very Good==
-Uncle Owen walked {token('A')} of a mile from his hangar to Luke Skywalker’s room and {token('B')} of a mile from Luke Sky- walker’s room to his own room. How many miles did Uncle Owen walk in all?
-==Very Good==
-Darth Vader flew {token('A')} of a mile from his planet to Senator Palpatine’s base and {token('B')} of a mile from Senator Palpatine’s base to his own. How many miles did Darth Vader fly in all?
 ==Good==
-Uncle Owen walked {token('A')} miles from his hangar to Luke Skywalker’s room and {token('B')} miles from Luke Sky- walker’s room to his own room. How many miles did Uncle Owen walk in all?
+Uncle Owen walked {token('A')} of a mile from his hangar to Luke Skywalker’s room and {token('B')} of a mile from Luke Sky- walker’s room to his own room. How many miles did Uncle Owen walk in all?
+==Good==
+Darth Vader flew {token('A')} of a mile from his planet to Senator Palpatine’s base and {token('B')} of a mile from Senator Palpatine’s base to his own. How many miles did Darth Vader fly in all?
 ==Bad==
 Darth Vader flew {token('A')} of a mile from his planet to Senator Palpatine’s base and {token('B')} of a mile from Senator Palpatine’s base to his own. Then he flew {token('C')} more miles to fight Anakin. How many miles did Darth Vader fly in all?
 
 New Theme - Western: 
-==Very Good==
-Duane strolled {token('A')} of a mile from his barn to Madeline’s camp and {token('B')} of a mile from Madeline’s camp to his own camp. How many miles did Duane stroll in all?
-==Very Good==
-Cowboy Chris rode {token('A')} of a mile from his ranch to Sheriff Steve’s town and {token('B')} of a mile from Sherrif Steve’s town to his own. How many miles did Cowboy Chris stroll in all?
 ==Good==
-Duane strolled {token('A')} miles from his barn to Madeline’s camp and {token('B')} miles from Madeline’s camp to his own camp. How many miles did Duane stroll in all?
+Duane strolled {token('A')} of a mile from his barn to Madeline’s camp and {token('B')} of a mile from Madeline’s camp to his own camp. How many miles did Duane stroll in all?
+==Good==
+Cowboy Chris rode {token('A')} of a mile from his ranch to Sheriff Sarah’s town and {token('B')} of a mile from Sherrif Sarah’s town to his own. How many miles did Cowboy Chris stroll in all?
 ==Bad==
-Cowboy Chris rode {token('A')} of a mile from his ranch to Sheriff Steve’s town and {token('B')} of a mile from Sherrif Steve’s town to his own. He then rode {token('C')} more miles to wrangle some sheep. How many miles did Cowboy Chris stroll in all?
+Cowboy Chris rode {token('A')} of a mile from his ranch to Sheriff Sarah’s town and {token('B')} of a mile from Sherrif Sarah’s town to his own. He then rode {token('C')} more miles to wrangle some sheep. How many miles did Cowboy Chris stroll in all?
 ------------------------
 Original Problem:
 {problem}
 
 New Theme - {theme}: 
-==Very Good==
+==Good==
 """
   return x
 
@@ -257,13 +253,31 @@ Intro:
 {intro}
 
 Rewritten:
-  """
+"""
   return x
 
 z = """
 Duane was a cowboy who lived on a sprawling ranch in the heart of the Wild West. One day, he decided to visit his friend Madeline, who had set up camp --A-- of a mile away. As he walked, he couldn't help but admire the beauty of the open range and the majestic mountains looming in the distance.
 
 """
+
+def combine_intro_and_prompt(intro, problem, token=token_v1):
+  x = f"""Combine the intro and problem so that the two flow together nicely. Make as little changes as possible.
+
+Intro:
+John, Sarah, and Steve were all running for office in the same district. As politicians, they knew it was their job to represent their constituents to the best of their abilities. So, they each went out and campaigned rigorously to spread their message. In the end, they all won their respective seats. Now, they wanted to figure out how many constituents they had in total.
+Problem:
+John, Sarah, and Stever are all politicians. John has {token('A')} constituents, Sarah has {token('B')} constituents, and Steve has {token('C')} constituents. How many constituents do they have together?
+Combined:
+John, Sarah, and Steve were all running for office in the same district. As politicians, they knew it was their job to represent their constituents to the best of their abilities. So, they each went out and campaigned rigorously to spread their message. In the end, they all won their respective seats. Now, they wanted to figure out how many constituents they had in total. John has 10 constituents, Sarah has 20 constituents, and Steve has 34 constituents. How many constituents do they have together?
+---
+Intro:
+{intro}
+Problem:
+{problem}
+Combined:
+"""
+  return x
 
 # print(intro_check_for_numbers_v1(z)) # Duane was a cowboy who lived on a sprawling ranch in the heart of the Wild West. One day, he decided to visit his friend Madeline, who had set up camp a certain distance away. As he walked, he couldn't help but admire the beauty of the open range and the majestic mountains looming in the distance.
 # Intro (good):

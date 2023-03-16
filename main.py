@@ -20,12 +20,13 @@ auth = Authentication(api_key=helm_key)
 service = RemoteService("https://crfm-models.stanford.edu")
 
 problems = json.load(open("problems.json"))
-themes = ["sports", "cats", "unicorns", "art"]
+themes = ["sports", "cats", "unicorns", "art", "spiderman"]
 
 
 def rewrite_and_revise(
     original_problem,
     theme,
+    api_key,
     token_fn=prompts.token_v1,
     prompt_fn=prompts.scaled_results_v1,
     revise_yes_no_fn=prompts.yes_no_critique_v1,
@@ -33,6 +34,9 @@ def rewrite_and_revise(
     include_intro=True,
     **kwargs,
 ):
+    auth = Authentication(api_key=api_key)
+    service = RemoteService("https://crfm-models.stanford.edu")
+
     rewrite_prompt = prompt_fn(original_problem, theme, token=token_fn)
     request = Request(
         model="openai/text-davinci-003",
@@ -59,7 +63,6 @@ def rewrite_and_revise(
       # print("no critique", critique)
       pass
     else:
-      # print("got critique!", rewritten_problem, critique)
       revise_prompt = revise_fn(
           original_problem, rewritten_problem, theme, critique, token=token_fn
       )
@@ -70,7 +73,7 @@ def rewrite_and_revise(
       result = request_result.completions[0].text
       revision = result[: min(result.find("END"), result.find("----"))]
 
-    intro = ""
+    intro = None
     if include_intro:
       intro_prompt = prompts.write_intro_v2(revision if revision else rewritten_problem, token_fn)
 
@@ -93,10 +96,23 @@ def rewrite_and_revise(
           request_result: RequestResult = service.make_request(auth, request)
           new_intro = request_result.completions[0].text.strip()
           intro = new_intro
-    return rewritten_problem, revision, intro
+      
+    combined = None
+    if intro:
+      problem = revision if revision else rewritten_problem
+      intro_prompt = prompts.combine_intro_and_prompt(problem, intro)
+      request = Request(
+        model="openai/text-davinci-003", prompt=intro_prompt, echo_prompt=False, temperature=0.1, max_tokens=300
+      )
+      request_result: RequestResult = service.make_request(auth, request)
+      combined = request_result.completions[0].text.strip()
 
 
-def one_off(problem, theme, constraints_string, include_intro=True):
+    critique = critique[critique.find('.') + 1:] if critique.lower().startswith("y") else None
+    return rewritten_problem, critique, revision, intro, combined
+
+
+def one_off(problem, theme, constraints_string, helm_key, include_intro=True):
     subbed_problem, nums = sub.problem_to_generic(problem)
     # prompt = prompts.scaled_results_v1(subbed_problem, theme)
 
@@ -107,13 +123,16 @@ def one_off(problem, theme, constraints_string, include_intro=True):
     # result = request_result.completions[0].text
     # result =
 
-    rewritten, revision, intro = rewrite_and_revise(subbed_problem, theme, include_intro=include_intro)
-    new_nums = list(constraints.parse_constraints(constraints_string, split_char='|').values())
+    rewritten, critique, revision, intro, combined = rewrite_and_revise(subbed_problem, theme, helm_key, include_intro=include_intro)
+    num_dict = constraints.parse_constraints(constraints_string, split_char='|')
+    new_nums = list(num_dict.values())
     rewritten = sub.generic_to_problem(rewritten, new_nums)
     if revision:
       revision = sub.generic_to_problem(revision, new_nums)
+    if combined:
+      combined = sub.generic_to_problem(combined, new_nums)
     
-    return rewritten, revision, intro
+    return rewritten, critique, revision, intro, combined, num_dict.get('answer')
 
 
 def demo():
@@ -194,15 +213,35 @@ if __name__ == "__main__":
 #         print(revision if revision else rewritten)
 #         break
 
-    constraints_string = "A=randint(2,20)|B=randint(5,30)|C=randint(12,55)"
-    problem = """Sandy has 10 books, Benny has 24 books, and Tim has  33 books. How many books do they have together ?"""
-    print(problem)
-    for theme in themes + ["baseball"]:
+    # In the UI, can just have each X=(expr) on its own line
+    # just set constraints.parse_constraints(constraints_string, split_char='\n')
+    constraints_string = "A=randint(2,20)|B=randint(5,30)|C=randint(12,55)|answer=A+B+C"
+    # problem = """Sandy has 10 books, Benny has 24 books, and Tim has  33 books. How many books do they have together ?"""
+    # problem = """Sandy, Jessica, and Kate are nurses. Sandy has 10 patients, Jessica has 24 patients, and Kate has 33 patients. How many patients do they have together?"""
+    problem = "Sam had 9 dimes in his bank. His dad gave him 7 more dimes. How many dimes does Sam have now ?"
+    for theme in  ["sports"]:
         # problem = "Sam went to 14 football games this year. He went to 29 games  last year. How many football games did Sam go to in all?"
-        rewritten, revision, intro = one_off(problem, theme, constraints_string)
+
+        # rewritten: the straight up rewritten problem
+        # critique: the critique if there is one, else None. Should have the "Yes." cut off
+        # revision: None if no revision, otherwise, the revised problem
+        # intro: None if no intro asked for, otherwise, the intro to the problem that shouldn't contain any numbers
+        # answer: if the constraints_string has an 'answer=(expression)' then answer will be the evaluated expression, else None.
+        rewritten, critique, revision, intro, combined, answer = one_off(problem, theme, constraints_string, helm_key)
         print('-----')
+        print('critique:', critique)
         print('theme:', theme)
         print('intro:', intro)
         print('new problem:', revision if revision else rewritten)
+        print('combined:', combined)
+        print('answer', answer)
 
 
+
+
+# theme: sports
+# intro: John was the star quarterback of his high school football team. He was known for his skill on the field and his passion for the game. Every day he would go to practice with a smile on his face, ready to learn and to work hard. One day, he opened his locker and was surprised to find his coach had left him a special gift - some brand-new footballs! He quickly figured out just how many he had in total.
+# new problem: John had 2 footballs in his locker. His coach gave him 11 more footballs. How many footballs does John have now?
+
+# combined: John was the star quarterback of his high school football team. He was known for his skill on the field and his passion for the game. Every day he would go to practice with a smile on his face, ready to learn and to work hard. One day, he opened his locker and was surprised to find his coach had left him a special gift - some brand-new footballs! He quickly figured out that he had 2 footballs in his locker, and with the 11 more footballs his coach had given him, how many footballs does John have now?
+# answer 38
