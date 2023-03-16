@@ -100,7 +100,7 @@ def rewrite_and_revise(
     combined = None
     if intro:
       problem = revision if revision else rewritten_problem
-      intro_prompt = prompts.combine_intro_and_prompt(problem, intro)
+      intro_prompt = prompts.combine_intro_and_problem(problem, intro)
       request = Request(
         model="openai/text-davinci-003", prompt=intro_prompt, echo_prompt=False, temperature=0.1, max_tokens=300
       )
