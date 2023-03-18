@@ -88,7 +88,9 @@ def generate_word_problems(): ## make themes global state? need constraints
 
             for index, [generic_form, c] in subbed_df.iterrows():
                 constraints_ = c
-                constraints_key = generate_contraint_key(constraints_)
+                constraints_key = constraints_
+                print(c)
+                print(constraints_key)
                 for theme in themes:
                     problem = st.session_state.input_problems[index]
                     results = one_off(problem, theme, constraints_key, helm_key)
