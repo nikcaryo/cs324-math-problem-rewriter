@@ -114,6 +114,7 @@ def rewrite_and_revise(
 
 def one_off(problem, theme, constraints_string, helm_key, include_intro=True):
     subbed_problem, nums = sub.problem_to_generic(problem)
+
     # prompt = prompts.scaled_results_v1(subbed_problem, theme)
 
     # print(subbed_problem, nums)
@@ -123,9 +124,14 @@ def one_off(problem, theme, constraints_string, helm_key, include_intro=True):
     # result = request_result.completions[0].text
     # result =
     rewritten, critique, revision, intro, combined = rewrite_and_revise(subbed_problem, theme, helm_key, include_intro=include_intro)
-    print(rewritten, critique, revision, intro, combined)
+    # print(rewritten, critique, revision, intro, combined)
 
     num_dict = constraints.parse_constraints(constraints_string, split_char='|')
+    
+    answer = None
+    if "answer" in num_dict:
+       answer = num_dict["answer"] 
+       del num_dict["answer"]
     new_nums = list(num_dict.values())
     rewritten = sub.generic_to_problem(rewritten, new_nums)
     if revision:
@@ -133,7 +139,7 @@ def one_off(problem, theme, constraints_string, helm_key, include_intro=True):
     if combined:
       combined = sub.generic_to_problem(combined, new_nums)
     
-    return rewritten, critique, revision, intro, combined, num_dict.get('answer')
+    return rewritten, critique, revision, intro, combined, num_dict.get('answer'), subbed_problem
 
 
 def demo():
@@ -229,7 +235,7 @@ if __name__ == "__main__":
         # intro: None if no intro asked for, otherwise, the intro to the problem that shouldn't contain any numbers
         # combined: (intro and rewritten/revision) combined via gpt
         # answer: if the constraints_string has an 'answer=(expression)' then answer will be the evaluated expression, else None.
-        rewritten, critique, revision, intro, combined, answer = one_off(problem, theme, constraints_string, helm_key)
+        rewritten, critique, revision, intro, combined, answer, generic= one_off(problem, theme, constraints_string, helm_key)
         print('-----')
         print('critique:', critique)
         print('theme:', theme)

@@ -65,6 +65,13 @@ def parse_constraints(constraints_textbox, split_char='\n'):
         evaluated_constant = True
         popped_one = True
         break
+      if expression == "?":
+        locals[letter] = expression
+        lines.pop(i)
+        evaluated_constant = True
+        popped_one = True
+        break
+      
          
 
     if evaluated_constant: continue

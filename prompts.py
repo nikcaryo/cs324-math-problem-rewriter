@@ -261,7 +261,7 @@ Duane was a cowboy who lived on a sprawling ranch in the heart of the Wild West.
 
 """
 
-def combine_intro_and_prompt(intro, problem, token=token_v1):
+def combine_intro_and_problem(intro, problem, token=token_v1):
   x = f"""Combine the intro and problem so that the two flow together nicely. Make as little changes as possible.
 
 Intro:
