@@ -49,6 +49,7 @@ def parse_constraints(constraints_textbox, split_char='\n'):
     popped_one = False
     evaluated_constant = False
     for i, line in enumerate(lines):
+      print(line)
       letter, expression = line.split('=')
       letter = letter.strip()
       expression = expression.strip()
@@ -97,7 +98,7 @@ def default_constraint_text(constraints):
   for i, num in enumerate(constraints):
     letter = chr(i + ord('A'))
     t.append(f"{letter} = {num}")
-  return ", ".join(t) + ", answer = ?"
+  return (" | ".join(t) + "| answer = ?").strip()
 
 
 # if __name__ == "__main__":

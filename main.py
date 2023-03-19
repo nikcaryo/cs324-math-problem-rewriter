@@ -91,7 +91,7 @@ def rewrite_and_revise(
         else:
           # low temp, do what we ask
           request = Request(
-            model="openai/text-davinci-003", prompt=remove_numbers_prompt, echo_prompt=False, temperature=0.1
+            model="openai/text-davinci-003", prompt=remove_numbers_prompt, echo_prompt=False, temperature=0.1, max_tokens=300
           )
           request_result: RequestResult = service.make_request(auth, request)
           new_intro = request_result.completions[0].text.strip()
