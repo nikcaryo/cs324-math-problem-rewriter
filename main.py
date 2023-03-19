@@ -127,7 +127,7 @@ def one_off(problem, theme, constraints_string, helm_key, include_intro=True):
     # print(rewritten, critique, revision, intro, combined)
 
     num_dict = constraints.parse_constraints(constraints_string, split_char='|')
-    
+    print("num_dict", num_dict)
     answer = None
     if "answer" in num_dict:
        answer = num_dict["answer"] 
@@ -139,7 +139,7 @@ def one_off(problem, theme, constraints_string, helm_key, include_intro=True):
     if combined:
       combined = sub.generic_to_problem(combined, new_nums)
     
-    return rewritten, critique, revision, intro, combined, num_dict.get('answer'), subbed_problem
+    return rewritten, critique, revision, intro, combined, answer, subbed_problem
 
 
 def demo():

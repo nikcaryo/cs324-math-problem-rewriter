@@ -46,15 +46,19 @@ initial_question = {
 }
 ###
 
-def stWriteWordProblem(problem, critique, id, theme):
-    c1_, c2_, c3_= st.columns([5, 1, 1])
+def stWriteWordProblem(problem, critique, id, theme, answer):
+    if answer == None: answer = " "
+    
+    c1_, c2_, c3_ ,c4_= st.columns([5, 1, 1, 1])
     # with c0_:
     #     st.write("<h3 style='text-align: center; visibility: hidden;'>"+str(id)+"</h3>", unsafe_allow_html=True)
     with c1_:
         st.write(problem)
     with c2_:
-        st.write("<p style='text-align: center;'>"+theme+"</p>", unsafe_allow_html=True)
+        st.write("<p style='text-align: center;'>"+str(answer)+"</p>", unsafe_allow_html=True)
     with c3_:
+        st.write("<p style='text-align: center;'>"+theme+"</p>", unsafe_allow_html=True)
+    with c4_:
         if critique:
             text = "⚠️"
             st.write("<p style='text-align: center;'>"+text+"</p>", unsafe_allow_html=True)
@@ -80,19 +84,25 @@ def generate_contraint_key(constraints) -> str:
     res = no_space.replace(",", "|")
     return res
 
-def generate_word_problems(): ## make themes global state? need constraints
+def generate_word_problems(updated_constraints): ## make themes global state? need constraints
+
     with text_spinner_placeholder:
         with st.spinner("Generating new questions..."):
             themes = st.session_state.theme_input.split(",")
             theme_results_dict = {}
 
             for index, [generic_form, c] in subbed_df.iterrows():
-                constraints_ = c
+                
+                constraints_ =  st.session_state.generic_table[index][1]
+
                 constraints_key = generate_contraint_key(constraints_)
+
                 for theme in themes:
                     problem = st.session_state.input_problems[index]
                     results = one_off(problem, theme, constraints_key, helm_key)
                     [rewritten, critique, revision, intro, combined, answer, generic] = results
+
+
                     theme_results_dict[(index, theme)] = results
 
             #display problems
@@ -140,7 +150,15 @@ def batch_input_problems():
     for index, problem in gdf.iterrows():
         generate_generic_table(problem["Problem Description"], themes)
 
+
+def update_generic_and_const():
+    if not st.session_state.global_bool:
+        st.session_state.global_bool = True
+
+
 ### state variables
+if "global_bool" not in st.session_state:
+    st.session_state.global_bool = False
 if "input_problems" not in st.session_state:
     st.session_state.input_problems = []
 if "generic_table" not in st.session_state:
@@ -223,7 +241,7 @@ else:
 
 
 if st.session_state.generic_table:
-     #display generic table
+
     st.subheader('Generic Problem and Contraints')
     subbed_df = st.experimental_data_editor(
     pd.DataFrame(
@@ -233,29 +251,41 @@ if st.session_state.generic_table:
         ],
     ),
     num_rows="fixed",
-    use_container_width=True, key = "gdf"
+    use_container_width=True, key = "gdf",
+    on_change=  update_generic_and_const
     )
+
+    if st.session_state.global_bool: 
+        for index, c_ in subbed_df.to_dict()["Constraints"].items():
+            print(index)
+            print(c_)
+            gen, c_old = st.session_state.generic_table[index]
+            st.session_state.generic_table[index] = (gen, c_)
+            # st.session_state.generic_table[index][1] = c_
+        st.session_state.global_bool = False
 
     generate_problems_btn = st.button(
         label="Generate New Word Problems",
         type="primary",
         on_click=generate_word_problems,
-        # args = subbed_df
+        args = subbed_df.to_dict()["Constraints"]
     )
 
 text_spinner_placeholder = st.empty()
 
 if st.session_state.problems:
     st.subheader('New Problems')
-    h1, h2, h3= st.columns([5, 1, 1])
+    h1, h2, h3, h4= st.columns([5,1, 1, 1])
     # with h0:
     #     st.write("<p style='text-align: center; visibility: hidden;'>"+"0"+"</p>", unsafe_allow_html=True)
     with h1:
         st.write("<p style='text-align: center;font-weight: bold;'>"+"Problem Description"+"</p>", unsafe_allow_html=True)
     with h2:
+        st.write("<p style='text-align: center;font-weight: bold;'>"+"Answer"+"</p>", unsafe_allow_html=True)
+    with h3:
         st.write("<p style='text-align: center;font-weight: bold;'>"+"Theme"+"</p>", unsafe_allow_html=True)
         # st.write("<p>"+"Theme"+"</p>", unsafe_allow_html=True)
-    with h3:
+    with h4:
          st.write("<p style='text-align: center;font-weight: bold;'>"+"Status"+"</p>", unsafe_allow_html=True)
 
     theme_id = 0
@@ -267,7 +297,7 @@ if st.session_state.problems:
         if intro_checkbox_result:
             problem = intro + " " + problem
 
-        stWriteWordProblem(problem, critique, theme_id, theme)
+        stWriteWordProblem(problem, critique, theme_id, theme, answer)
         theme_id += 1
         problems_to_copy += problem + "\n"
 

@@ -87,6 +87,7 @@ def parse_constraints(constraints_textbox, split_char='\n'):
       except ValueError as e:
         pass
   if not lines:
+
     return locals
   else:
      raise(Exception('Bad!'))
