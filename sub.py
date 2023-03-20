@@ -37,6 +37,8 @@ def problem_to_generic(s):
 def generic_to_problem(s, args):
   count = 0
   lines = []
+  print(s)
+  print(args)
   for line in s.split('\n'):
     result = []
     for word in line.split():
